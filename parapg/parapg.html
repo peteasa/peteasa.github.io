@@ -281,6 +281,8 @@ Error message and password prompt
 
 <li>BSP</li>
 
+<li>Building Open Hardware fpga</li>
+
 <li>Building the System</li>
 
 <li>Bulk Synchronous Parallel</li>
@@ -304,6 +306,8 @@ Error message and password prompt
 <li>Erlang Language</li>
 
 <li>FrontPageStylesheet</li>
+
+<li>Future Work</li>
 
 <li>Glossary</li>
 
@@ -375,6 +379,10 @@ Error message and password prompt
 
 <li>Parallel Architectures Library 2</li>
 
+<li>Parallella Kernel Driver</li>
+
+<li>Parallella Yocto Build</li>
+
 <li>Proof Of Concept</li>
 
 <li>referenceEntry</li>
@@ -409,7 +417,13 @@ Error message and password prompt
 
 <li>SPMD.svg</li>
 
+<li>System Requirements</li>
+
 <li>TableOfContents</li>
+
+<li>Testing the System</li>
+
+<li>The End</li>
 
 <li>Using Directive Pragma</li>
 
@@ -450,9 +464,9 @@ by
 &lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
 </pre>
 </div>
-<div created="20151020163120922" creator="matabele" modified="20160822124233190" modifier="PeterSaunderson" tags="$:/tags/PageControls" title="$:/_buttons/print" type="application/x-tiddler">
+<div created="20151020163120922" creator="matabele" modified="20160823114609885" modifier="PeterSaunderson" tags="$:/tags/PageControls" title="$:/_buttons/print" type="application/x-tiddler">
 <pre>&lt;$button tooltip=&quot;Print&quot; class=&quot;tc-btn-invisible&quot;&gt;
-&lt;$x-print $filter=&quot;[[ ]] [[Proof Of Concept]] [[Changing Environment]] [[New Software Stack]] [[Parallel Architectures Library]] [[Parallel Architectures Library 2]] [[Building the System]] [[Additional Material]]&quot;/&gt;
+&lt;$x-print $filter=&quot;[[ ]] [[Proof Of Concept]] [[Changing Environment]] [[New Software Stack]] [[Parallel Architectures Library]] [[Parallel Architectures Library 2]] [[Building the System]] [[System Requirements]] [[Future Work]] [[Additional Material]] [[SC.References]]&quot;/&gt;
 {{$:/_image/print.svg}}
 &lt;/$button&gt;</pre>
 </div>
@@ -8237,7 +8251,7 @@ html body .tc-subtitle {
 <div status="complete" title="$:/Import">
 <pre>The following tiddlers were imported:
 
-# [[OpenACC]]</pre>
+# [[Proof Of Concept]]</pre>
 </div>
 <div title="$:/isEncrypted">
 <pre>no</pre>
@@ -8767,7 +8781,7 @@ Action widget to print the current window.
 <div created="20160819141916138" creator="P" modified="20160819141921114" modifier="PeterSaunderso" title="$:/status/UserName">
 <pre>PeterSaunderson</pre>
 </div>
-<div list="$:/Import [[ ]] Contents [[Building the System]] [[Additional Material]] Glossary OpenACC" title="$:/StoryList">
+<div list="$:/Import [[ ]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20160819142009216" creator="PeterSaunderson" modified="20160819142009216" modifier="PeterSaunderson" title="$:/temp/advancedsearch">
@@ -9062,8 +9076,26 @@ Back to:
 &lt;/$list&gt;
 </pre>
 </div>
-<div created="20160821072251582" creator="PeterSaunderson" modified="20160821072312976" modifier="PeterSaunderson" tags="Contents" title="Building the System">
-<pre></pre>
+<div briefdescription="[[8Gbps link|https://www.parallella.org/2015/08/07/an-open-source-8gbps-low-latency-chip-to-chip-interface/]] to [[Epiphany-III|http://www.adapteva.com/epiphanyiii/]]" created="20160822211659288" creator="PeterSaunderson" modified="20160823105418132" modifier="PeterSaunderson" tags="[[Building the System]]" title="Building Open Hardware fpga">
+<pre>The programmable [[Xilinx 7020|http://www.xilinx.com/products/silicon-devices/soc/zynq-7000.html]] is flexible and can contain [[8Gbps link|https://www.parallella.org/2015/08/07/an-open-source-8gbps-low-latency-chip-to-chip-interface/]] to [[Epiphany-III|http://www.adapteva.com/epiphanyiii/]] ''and'' [[RISC-V core|http://eliaskousk.teamdac.com/]] or e-link and [[Analog Devices HDMI|https://wiki.analog.com/_detail/resources/fpga/xilinx/kc705/cf_adv7511_bd.jpg?id=resources%3Afpga%3Axilinx%3Akc705%3Aadv7511]] ''or'' something else?
+&lt;ul&gt;&lt;li&gt;Necessary tools are readily available see getting started guide &quot;[[Building 7020_hdmi|https://github.com/peteasa/parallella/wiki/Building-7020_hdmi#preparation]]&quot;&lt;/li&gt;
+&lt;li&gt;[[OH!|https://github.com/parallella/oh]] hdl code for the 8Gbps link is available&lt;/li&gt;
+&lt;li&gt;All that is needed is hard work to add functionality and keep the rest of the system up to date&lt;/li&gt;
+&lt;li&gt;Adding hardware requires update to linux drivers&lt;/li&gt;
+&lt;ul&gt;&lt;li&gt;[[device tree updates|https://github.com/peteasa/parallella/wiki/Building-7020_hdmi#generating-the-device-tree]] are an output from the Xilinx tools&lt;/li&gt;
+&lt;li&gt;[[Parallella Yocto Build]] keeps fpga and linux drivers in sync&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/ul&gt;
+
+&lt;sup&gt;[[Parallella Yocto Build]]&lt;/sup&gt;</pre>
+</div>
+<div created="20160822211450943" creator="PeterSaunderson" modified="20160823122925548" modifier="PeterSaunderson" tags="Contents" title="Building the System">
+<pre>&lt;ul&gt;&lt;li&gt;{{{ [[System Requirements]] || singleLineEntry }}}&lt;/li&gt;
+&lt;li&gt;{{{ [[Building Open Hardware fpga]] || singleLineEntry }}}&lt;/li&gt;
+&lt;li&gt;{{{ [[Parallella Yocto Build]] || singleLineEntry }}}&lt;/li&gt;
+&lt;li&gt;{{{ [[Testing the System]] || singleLineEntry }}}&lt;/li&gt;
+&lt;/ul&gt;
+&lt;sup&gt;[[System Requirements]]&lt;/sup&gt;</pre>
 </div>
 <div briefdescription="library to assist in running tasks in a parallel processing system" created="20160821171446770" creator="PeterSaunderson" modified="20160821195330640" modifier="PeterSaunderson" tags="[[Using Multiple Cores]]" title="Bulk Synchronous Parallel">
 <pre>[[BSP]]: &lt;$transclude field=&quot;briefdescription&quot;/&gt;
@@ -9111,7 +9143,7 @@ Back to:
 
 &lt;sub&gt;[[Erlang Language]]&lt;/sub&gt;</pre>
 </div>
-<div created="20160821222913776" creator="PeterSaunderson" modified="20160822150904146" modifier="PeterSaunderson" tags="Contents" title="Changing Environment">
+<div created="20160821222913776" creator="PeterSaunderson" modified="20160823122714836" modifier="PeterSaunderson" tags="Contents" title="Changing Environment">
 <pre>&lt;ul&gt;&lt;li&gt;Existing technologies ([[MPI]], [[OpenCL]], [[OpenMP]]) are maturing&lt;/li&gt;
 &lt;li&gt;The advocates for competing tools are coming together [[OpenHPC|http://www.openhpc.community/category/blog/]]&lt;/li&gt;
 &lt;li&gt;But the environment is changing.  See for example &lt;/li&gt;
@@ -9123,8 +9155,10 @@ Back to:
 
 &lt;sup&gt;[[New Software Stack]]&lt;/sup&gt;</pre>
 </div>
-<div created="20160821080351068" creator="PeterSaunderson" list="[[ ]] [[Proof Of Concept]] [[Changing Environment]] [[New Software Stack]] [[Building the System]] [[Additional Material]] HowToSlideShow" modified="20160822122228702" modifier="PeterSaunderson" title="Contents">
-<pre>&lt;$list filter=&quot;[tag[Contents]] -HowToSlideShow&quot;/&gt;
+<div created="20160821080351068" creator="PeterSaunderson" list="[[ ]] [[Proof Of Concept]] [[Changing Environment]] [[New Software Stack]] [[Building the System]] [[Future Work]] [[The End]] [[Additional Material]] HowToSlideShow" modified="20160823060907178" modifier="PeterSaunderson" title="Contents">
+<pre>&lt;sub&gt;{{$:/core/ui/Buttons/home}}&lt;/sub&gt;
+
+&lt;$list filter=&quot;[tag[Contents]] -HowToSlideShow&quot;/&gt;
 </pre>
 </div>
 <div created="20160822151409326" creator="PeterSaunderson" modified="20160822153146124" modifier="PeterSaunderson" publication="David A. Richie and James A. Ross &quot;OpenCL + OpenSHMEM Hybrid Programming Model for the Adapteva Epiphany Architecture&quot;, OpenSHMEM 2016, Third workshop on OpenSHMEM." tags="SC.References" title="David A. Richie">
@@ -9155,6 +9189,21 @@ Back to:
 .pres-sub-title {font-size: 20px; text-align: center}
 
 .pres-author {font-size: 24px; text-align: center}</pre>
+</div>
+<div created="20160822212207909" creator="PeterSaunderson" modified="20160823122119560" modifier="PeterSaunderson" tags="Contents" title="Future Work">
+<pre>In no particular order:
+&lt;ul&gt;
+&lt;li&gt;Built in support for PAL libraries&lt;/li&gt;
+&lt;li&gt;Cluster management tool like SLURM&lt;/li&gt;
+&lt;li&gt;Update of meta-exotic for gcc 5.x tools and adding gdb&lt;/li&gt;
+&lt;ul&gt;&lt;li&gt;also prove with another processor (RISK-V)&lt;/li&gt;&lt;/ul&gt;
+&lt;li&gt;North / south direct Epiphany connection&lt;/li&gt;
+&lt;li&gt;Updating the various repositories that make up https://github.com/peteasa/parallella/wiki takes time&lt;/li&gt;
+&lt;/ul&gt;
+
+Contributors or sponsors for this work are always welcome!
+
+&lt;sup&gt;[[The End]]&lt;/sup&gt;</pre>
 </div>
 <div created="20160731182729431" creator="PeterSaunderson" modified="20160821092120749" modifier="PeterSaunderson" tags="[[Additional Material]]" title="Glossary">
 <pre>&lt;dl&gt;{{{ [tag[Glossary]sort[title]] || listEntry }}}&lt;/dl&gt;</pre>
@@ -9223,9 +9272,10 @@ Back to:
 &lt;$list filter=&quot;[all[current]backlinks[]sort[title]]&quot; emptyMessage=&lt;&lt;lingo References/Empty&gt;&gt; template=&quot;$:/core/ui/ListItemTemplate&quot;&gt;
 &lt;/$list&gt;</pre>
 </div>
-<div briefdescription="specification used in a distributed memory model" created="20160821171511987" creator="PeterSaunderson" modified="20160821211018442" modifier="PeterSaunderson" tags="[[Using Multiple Cores]]" title="Message Passing Interface">
+<div briefdescription="specification used in a distributed memory model" created="20160821171511987" creator="PeterSaunderson" modified="20160823082248275" modifier="PeterSaunderson" tags="[[Using Multiple Cores]]" title="Message Passing Interface">
 <pre>[[MPI]]: &lt;$transclude field=&quot;briefdescription&quot;/&gt;
 
+https://www.mpi-forum.org/
 &lt;ul&gt;&lt;li&gt;well-structured interface for message-passing between parallel systems&lt;/li&gt;
 &lt;li&gt;&quot;industry standard&quot; for writing message passing programs on HPC platforms&lt;/li&gt;
 &lt;li&gt;MPI is a specification for how a MPI conformant library should be used&lt;/li&gt;
@@ -10661,11 +10711,11 @@ Examples:
 
 &lt;sub&gt;[[Using Multiple Cores]]&lt;/sub&gt;</pre>
 </div>
-<div created="20160822084438410" creator="PeterSaunderson" modified="20160822152324678" modifier="PeterSaunderson" tags="Contents" title="New Software Stack">
+<div created="20160822084438410" creator="PeterSaunderson" modified="20160823081901096" modifier="PeterSaunderson" tags="Contents" title="New Software Stack">
 <pre>&lt;ul&gt;&lt;li&gt;The Epiphany chip has been proven with many of the available HPC tools:&lt;/li&gt;
 &lt;ul&gt;&lt;li&gt;[[MPI]] / OpenCL - [[COPRTHR SDK|http://www.browndeertechnology.com/coprthr2.htm]]&lt;/li&gt;
-&lt;li&gt;OpenSHMEM - [[James Ross, David Richie|http://arxiv.org/pdf/1608.03545v1.pdf]]&lt;/li&gt;
 &lt;li&gt;OpenMP - [[OMPi|http://paragroup.cse.uoi.gr/wpsite/software/ompi/]]&lt;/li&gt;
+&lt;li&gt;OpenSHMEM - [[James Ross, David Richie|http://arxiv.org/pdf/1608.03545v1.pdf]]&lt;/li&gt;
 &lt;li&gt;Even [[SLURM]] for cluster management - see [[forum post|https://www.parallella.org/forums/viewtopic.php?f=32&amp;t=1632&amp;p=10146&amp;hilit=SLURM#p10145]]&lt;/li&gt;
 &lt;/ul&gt;
 &lt;li&gt;The [[Parallel Architectures Library]] plan to rewrite maths, blas, dsp and fft libraries from the ground up&lt;/li&gt;
@@ -10740,9 +10790,10 @@ pragma used to run the codelet:
 
 &lt;sub&gt;[[Open Multi Processing]]&lt;/sub&gt;</pre>
 </div>
-<div briefdescription="shared-memory parallel programming interface" created="20160821163158530" creator="PeterSaunderson" modified="20160821203705719" modifier="PeterSaunderson" tags="[[Using Multiple Cores]]" title="Open Multi Processing">
+<div briefdescription="shared-memory parallel programming interface" created="20160821163158530" creator="PeterSaunderson" modified="20160823082343382" modifier="PeterSaunderson" tags="[[Using Multiple Cores]]" title="Open Multi Processing">
 <pre>[[OpenMP]]: &lt;$transclude field=&quot;briefdescription&quot;/&gt;
 
+http://openmp.org/
 &lt;ol&gt;&lt;li&gt;Simple and easy to demonstrate&lt;/li&gt;
 &lt;li&gt;Built in to most compilers (gcc -fopenmp)&lt;/li&gt;
 &lt;li&gt;Build with / without OpenMP requires stubs or pre-processor switch in code&lt;/li&gt;
@@ -10816,16 +10867,16 @@ Back to:
 &lt;/$list&gt;
 </pre>
 </div>
-<div briefdescription="library for coprocessors and parallel machines" created="20160821164711374" creator="PeterSaunderson" modified="20160822101450715" modifier="PeterSaunderson" tags="[[Using Multiple Cores]] [[New Software Stack]]" title="Parallel Architectures Library">
+<div briefdescription="library for coprocessors and parallel machines" created="20160821164711374" creator="PeterSaunderson" modified="20160823123038036" modifier="PeterSaunderson" tags="[[Using Multiple Cores]] [[New Software Stack]]" title="Parallel Architectures Library">
 <pre>[[PAL]]: &lt;$transclude field=&quot;briefdescription&quot;/&gt;
 
+https://github.com/parallella/oh
 &lt;ul&gt;&lt;li&gt;Think of it as a POSIX library for coprocessors and parallel machines&lt;/li&gt;
-&lt;li&gt;Plans to implement maths, fft, dsp libraries&lt;/li&gt;
+&lt;li&gt;Plan to implement maths, fft, dsp libraries&lt;/li&gt;
 &lt;ul&gt;&lt;li&gt;redesign c libraries from bottom up to support parallel architectures&lt;/li&gt;
 &lt;li&gt;functions such as load, open, close, read, write would be used to implement OpenMP, [[MPI]], and OpenCL&lt;/li&gt;
-&lt;/ul&gt;&lt;li&gt;Fine grained nature of the [[PAL]] libraries required for Epiphany will likely scale easily to larger more sophisticated processor architectures&lt;/li&gt;
+&lt;/ul&gt;&lt;li&gt;Fine grained nature of the [[PAL]] libraries required for [[Epiphany-III|http://www.adapteva.com/epiphanyiii/]] will likely scale easily to larger more sophisticated processor architectures&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;sub&gt;[[Parallel Architectures Library 2]]&lt;/sub&gt;</pre>
 </div>
 <div created="20160821190938884" creator="PeterSaunderson" modified="20160822133304191" modifier="PeterSaunderson" tags="[[Using Multiple Cores]] [[New Software Stack]]" title="Parallel Architectures Library 2">
@@ -10851,17 +10902,22 @@ Example device library calls
 &lt;/div&gt;
 &lt;sub&gt;[[Building the System]]&lt;/sub&gt;</pre>
 </div>
-<div created="20160821152759370" creator="PeterSaunderson" modified="20160822125639978" modifier="PeterSaunderson" tags="Contents" title="Proof Of Concept">
+<div created="20160822211914419" creator="PeterSaunderson" modified="20160822211946692" modifier="PeterSaunderson" tags="[[Building the System]]" title="Parallella Kernel Driver">
+<pre>&lt;sup&gt;[[Testing the System]]&lt;/sup&gt;</pre>
+</div>
+<div briefdescription="taylor made distribution using [[Yocto|https://www.yoctoproject.org/]] " created="20160822211753122" creator="PeterSaunderson" modified="20160823112217236" modifier="PeterSaunderson" tags="[[Building the System]]" title="Parallella Yocto Build">
+<pre>&lt;sup&gt;[[Parallella Kernel Driver]]&lt;/sup&gt;</pre>
+</div>
+<div created="20160821152759370" creator="PeterSaunderson" modified="20160823123321134" modifier="PeterSaunderson" tags="Contents" title="Proof Of Concept">
 <pre>&lt;ul&gt;&lt;li&gt;A proof of concept super computer was created in 2015 ([[Supercomputer.io|https://www.parallella.org/2015/06/02/supercomputer-io-its-alive/]])&lt;/li&gt;
-&lt;li&gt;Used [[Epiphany-III|http://www.adapteva.com/epiphanyiii/]] 16-core Microprocessors (50 GFLOPS/W)&lt;/li&gt;
-&lt;li&gt;Can start small with little cost and grow as required&lt;/li&gt;
+&lt;li&gt;Used [[Epiphany-III|http://www.adapteva.com/epiphanyiii/]] 16-core processor (32 GFLOPS with 8Gbps interface)&lt;/li&gt;
+&lt;ul&gt;&lt;li&gt;note early Parallella tests did not use the 8Gbps [[oh|https://www.parallella.org/2015/08/07/an-open-source-8gbps-low-latency-chip-to-chip-interface/]] i/f&lt;/li&gt;
+&lt;/ul&gt;
+&lt;li&gt;Can start small with little cost (&lt;£100) and grow as required&lt;/li&gt;
 &lt;li&gt;Not restricted to [[MPMD]] architecture&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;sup&gt;[[Changing Environment]]&lt;/sup&gt;
-
-
-</pre>
+&lt;sup&gt;[[Changing Environment]]&lt;/sup&gt;</pre>
 </div>
 <div created="20160821110833168" creator="PeterSaunderson" description="IEEE Transactions on Computers. Vol. c-21, No.9, September 1972" modified="20160821111246476" modifier="PeterSaunderson" tags="" title="referenceEntry">
 <pre>&lt;dt&gt;&lt;$link&gt;&lt;$view field=&quot;title&quot;/&gt;&lt;/$link&gt;&lt;/dt&gt;&lt;dd&gt;&lt;$transclude field=&quot;publication&quot;/&gt;&lt;/dd&gt;</pre>
@@ -11671,6 +11727,23 @@ Back to:
 &lt;/svg&gt;
 </pre>
 </div>
+<div briefdescription="for [[Parallella|http://www.parallella.org/]] based system" created="20160821072251582" creator="PeterSaunderson" modified="20160823100509646" modifier="PeterSaunderson" tags="[[Building the System]]" title="System Requirements">
+<pre>&lt;table border=&quot;0&quot;&gt;&lt;tr&gt;&lt;td&gt;
+&lt;ul&gt;&lt;li&gt;Need to keep up to date with the latest&lt;/li&gt;
+&lt;ul&gt;&lt;li&gt;interrupt driven [[oh|https://www.parallella.org/2015/08/07/an-open-source-8gbps-low-latency-chip-to-chip-interface/]] elink i/f&lt;/li&gt;
+&lt;li&gt;new update kernel drivers and latest eSDK or [[PAL]] libraries&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/ul&gt;
+&lt;/td&gt;&lt;td&gt;[img width=400 [parallella_cluster.jpg]]&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;table border=&quot;0&quot;&gt;&lt;tr&gt;&lt;td&gt;
+&lt;ul&gt;&lt;li&gt;Easy method of distributing the software to the cluster&lt;/li&gt;
+&lt;li&gt;Would like easy extension of fpga, kernel and software&lt;/li&gt;
+&lt;li&gt;Would like to build Epiphany software on the build machine&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;sup&gt;[[Building Open Hardware fpga]]&lt;/sup&gt;</pre>
+</div>
 <div caption="{{$:/language/SideBar/Contents/Caption}}" created="20160821082336294" creator="PeterSaunderson" list-before="$:/core/ui/SideBar/Open" modified="20160821082644446" modifier="PeterSaunderson" tags="$:/tags/SideBar" title="TableOfContents" type="text/vnd.tiddlywiki">
 <pre>&lt;div class=&quot;tc-table-of-contents&quot;&gt;
 &lt;&lt;toc-selective-expandable 'Contents'&gt;&gt;
@@ -11678,6 +11751,14 @@ Back to:
 &lt;div class=&quot;tc-table-of-contents&quot;&gt;
 &lt;&lt;toc-selective-expandable 'TableOfContents'&gt;&gt;
 &lt;/div&gt;</pre>
+</div>
+<div briefdescription="rapid testing cycle: automation possible" created="20160822212115955" creator="PeterSaunderson" modified="20160823112655218" modifier="PeterSaunderson" tags="[[Building the System]]" title="Testing the System">
+<pre>&lt;sup&gt;[[Future Work]]&lt;/sup&gt;</pre>
+</div>
+<div created="20160822212239083" creator="PeterSaunderson" modified="20160823060825664" modifier="PeterSaunderson" title="The End">
+<pre>&lt;sup&gt;{{$:/core/ui/Buttons/home}}&lt;/sup&gt;&lt;br&gt;
+&lt;sup&gt;[[Glossary]]&lt;/sup&gt;&lt;br&gt;
+&lt;sup&gt;[[References|SC.References]]</pre>
 </div>
 <div briefdescription="using preprocessor instructions" created="20160821162357807" creator="PeterSaunderson" modified="20160821190208704" modifier="PeterSaunderson" tags="[[Using Multiple Cores]]" title="Using Directive Pragma">
 <pre>The compiler preprocessor is given additional instructions to identify parts of the software that can be run in parallel
@@ -11699,7 +11780,7 @@ Back to:
 
 &lt;sup&gt;[[Bulk Synchronous Parallel]]&lt;/sup&gt;</pre>
 </div>
-<div created="20160821071902728" creator="PeterSaunderson" list="[[A Programming Language]] [[Bulk Synchronous Parallel]] [[C++ Accelerated Massive Parallelism]] [[Cal Actor Language with Networking]] [[Erlang Language]] [[Message Passing Interface]] [[Message Passing Interface 2]] [[Open Accelerators]] [[Open Computing Language]] [[Open Computing Language 2]] [[Open Hybrid Multicore Parallel Programming]] [[Open Multi Processing]] [[Parallel Architectures Library]] [[Parallel Architectures Library 2]] [[Using Directive Pragma]] [[Using Libraries]]" modified="20160821222637728" modifier="PeterSaunderson" tags="[[Additional Material]]" title="Using Multiple Cores">
+<div created="20160821071902728" creator="PeterSaunderson" list="[[A Programming Language]] [[Bulk Synchronous Parallel]] [[C++ Accelerated Massive Parallelism]] [[Cal Actor Language with Networking]] [[Erlang Language]] [[Message Passing Interface]] [[Message Passing Interface 2]] [[Open Accelerators]] [[Open Computing Language]] [[Open Computing Language 2]] [[Open Hybrid Multicore Parallel Programming]] [[Open Multi Processing]] [[Parallel Architectures Library]] [[Parallel Architectures Library 2]] [[Using Directive Pragma]] [[Using Libraries]]" modified="20160823055852680" modifier="PeterSaunderson" tags="[[Additional Material]]" title="Using Multiple Cores">
 <pre>&lt;ul&gt;&lt;li&gt;Complete Multi-Core languages&lt;/li&gt;
 &lt;ul&gt;&lt;li&gt;{{{ [[A Programming Language]] || singleLineEntry }}}&lt;/li&gt;
 &lt;li&gt;{{{ [[Cal Actor Language with Networking]] || singleLineEntry }}}&lt;/li&gt;
